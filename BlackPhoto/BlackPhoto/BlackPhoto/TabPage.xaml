@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlackPhoto.TabPage"
+             xmlns:pages="clr-namespace:BlackPhoto;assembly=BlackPhoto"
+             Title="TabbedPage">
+  <!--Pages can be added as references or inline-->
+    <pages:ScannedPage Title="Scanned"/>
+    <pages:DeletedPage Title="Deleted"/>
+</TabbedPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlackPhoto.ScannedPage">
+    <!--<StackLayout>
+        <Label x:Name="testLabel"></Label>
+        <ListView x:Name="ListView"></ListView>
+        <Image x:Name="ImageTest"></Image>
+    </StackLayout>-->
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="testLabel" Grid.ColumnSpan="2" Grid.Row="0"></Label>
+        <ListView Grid.Column="1" Grid.Row="1" ItemSelected="ImageListView_OnItemSelected" RowHeight="250" x:Name="imageListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Image Aspect="AspectFit" Source="{Binding SourceAttr}"></Image>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
